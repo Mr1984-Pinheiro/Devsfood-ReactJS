@@ -17,6 +17,7 @@ align-items:center;
 
 export const PageBody = styled.div`
 display:flex;
-background-color:#0000FF;
+background-color: #F5DEB3;
+background-image: url('/assets/bg-salmao.jpg');
 flex:1;
 `;
