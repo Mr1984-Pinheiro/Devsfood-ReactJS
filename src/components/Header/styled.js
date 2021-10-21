@@ -6,7 +6,7 @@ export const Container = styled.div`
     padding: 20px;
     display: flex;
     justify-content: space-between;
-
+    align-items: center;
 `;
 
 export const Logo = styled.img`
@@ -15,5 +15,15 @@ height: 70px;
 `;
 
 export const SearchInput = styled.input`
-
+    border: 0;
+    border-radius: 25px;
+    width: ${props => props.active ? 300 : 0}px;
+    height: 50px;
+    background-image: url('/assets/search.png');
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-color: #FFF;
+    outline: 0;
+    padding-left: 50px;
 `;
