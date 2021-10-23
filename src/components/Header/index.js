@@ -1,15 +1,22 @@
 import React, { useState } from 'react';
 import { Container, Logo, SearchInput } from './styled'
 
-export default () => {
-    const [inputActive, setInputActive] = useState(false);
+export default ({ search, onSearch }) => {
+    const [inputActive, setInputActive] = useState(search == '' ? false : true);
 
     const handleInputFocus = () => {
         setInputActive(true);
     }
 
     const handleInputBlur = () => {
-        setInputActive(false);
+        if (search === '') {
+
+            setInputActive(false);
+        }
+    }
+
+    const handleChange = (e) => {
+        onSearch(e.target.value);
     }
 
     return (
@@ -18,6 +25,8 @@ export default () => {
             <SearchInput
                 type="text"
                 placeholder="Digite um produto..."
+                value={search}
+                onChange={handleChange}
                 active={inputActive}
                 onFocus={handleInputFocus}
                 onBlur={handleInputBlur}
