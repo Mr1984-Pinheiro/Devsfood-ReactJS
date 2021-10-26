@@ -12,6 +12,7 @@ export const Container = styled.div`
 export const Logo = styled.img`
 width: auto;
 height: 70px;
+
 `;
 
 export const SearchInput = styled.input`
@@ -20,6 +21,7 @@ export const SearchInput = styled.input`
     width: ${props => props.active ? 300 : 0}px;
     height: 50px;
     background-image: url('/assets/search.png');
+    background-image-color: #000;
     background-size: 30px;
     background-repeat: no-repeat;
     background-position: 10px center;
@@ -29,6 +31,7 @@ export const SearchInput = styled.input`
     transition: all ease .3s; 
     font-size: 15px;
     cursor: pointer;
+    
 
     &:focus {
         cursor: auto;
