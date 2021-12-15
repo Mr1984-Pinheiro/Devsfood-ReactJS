@@ -8,9 +8,10 @@ export const Container = styled.div`
 `;
 
 export const CategoryArea = styled.div`
-    color: #DC143C;
+    color: #fff;
     margin-top: 20px; 
     font-weight: bold;
+    font-size: 20px;
 `;
 
 export const CategoryList = styled.div`
