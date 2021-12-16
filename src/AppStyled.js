@@ -20,4 +20,5 @@ display:flex;
 background-color: #F5DEB3;
 background-image: url('/assets/bg-salmao.jpg');
 flex:1;
+over-flow-y: auto;
 `;
