@@ -8,10 +8,10 @@ export const Container = styled.div`
 `;
 
 export const CategoryArea = styled.div`
-    color: #fff;
+    color:  #FFF; 
     margin-top: 20px; 
     font-weight: bold;
-    font-size: 20px;
+    font-size: 25px;
 `;
 
 export const CategoryList = styled.div`
@@ -28,4 +28,21 @@ export const ProductList = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 15px;
+`;
+
+export const ProductPaginationArea = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    width: 30px;
+    margin-top: 20px;
+    margin-right: 10px;
+    
+`;
+export const ProductPaginationItem = styled.div`
+    background-color: ${props => props.active == props.current ? '#CCC' : '#FFF'};
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0px 3px 6px rgba(0,0,0,0.16);
+    cursor: pointer;
 `;
