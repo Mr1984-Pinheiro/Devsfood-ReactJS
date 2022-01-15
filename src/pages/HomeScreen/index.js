@@ -29,7 +29,7 @@ export default () => {
     const [products, setProducts] = useState([]);
     const [totalPages, setTotalPages] = useState(0);
 
-    const [modalStatus, setModalStatus] = useState(false);
+    const [modalStatus, setModalStatus] = useState(true);
 
     const [activeCategory, setActiveCategory] = useState(0);
     const [activePage, setActivePage] = useState(1);
@@ -130,8 +130,10 @@ export default () => {
 
             }
 
-            <Modal status={modalStatus} >
+            <Modal status={modalStatus} setStatus={setModalStatus} >
                 Conteudo do Modal
+                <div style={{ backgroundColor: '#FF0000', width: 600, height: 400 }}></div>
+                Fim do conteudo
             </Modal>
         </Container>
     );
