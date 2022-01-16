@@ -17,6 +17,7 @@ import Header from '../../components/Header';
 import CategoryItem from '../../components/CategoryItem';
 import ProductItem from '../../components/ProductItem';
 import Modal from '../../components/Modal';
+import ModalProduct from '../../components/ModalProduct';
 
 
 let searchTimer = null;
@@ -131,9 +132,9 @@ export default () => {
             }
 
             <Modal status={modalStatus} setStatus={setModalStatus} >
-                Conteudo do Modal
-                <div style={{ backgroundColor: '#FF0000', width: 600, height: 400 }}></div>
-                Fim do conteudo
+                <ModalProduct>
+
+                </ModalProduct>
             </Modal>
         </Container>
     );
