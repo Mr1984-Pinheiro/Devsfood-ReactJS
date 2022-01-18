@@ -7,13 +7,13 @@ export const Container = styled.div`
 `;
 
 export const ProductArea = styled.div`
-    height: 100px;
-    background-color: #FF0000;
+    height: 200px;
+     
     display: flex;
 `;
 export const ProductButtons = styled.div`
     height: 58px;
-    background-color: #00FF00;
+    
 `;
 
 export const ProductPhoto = styled.img`
@@ -22,11 +22,20 @@ export const ProductPhoto = styled.img`
 
 export const ProductInfoArea = styled.div`
     flex: 1;
-    background-color: #0000FF;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 `;
 
 
-export const ProductDetails = styled.div``;
-export const ProductQuantityArea = styled.div``;
+export const ProductDetails = styled.div`
+    height: 50px;
+    background-color: #FF0000;
+`;
+export const ProductQuantityArea = styled.div`
+    height: 50px;
+    background-color: #0000FF;
+`;
 
 
