@@ -64,6 +64,7 @@ export const ProductButton = styled.button`
  font-size: ${props => props.small ? '13px' : '22px'};
  font-weight: bold;
  padding: ${props => props.small ? '5px 10px' : '10px 20px'};
+ cursor: pointer;
 
 `;
 
@@ -81,6 +82,7 @@ export const ProductQtImage = styled.img`
     color: #000;
      margin-left: 10px;
     margin-right: 10px;
+    cursor: pointer;
 `;
 
 export const ProductQtText = styled.div`
