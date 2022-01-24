@@ -9,14 +9,20 @@ import {
     CartIcon,
     CartText,
     CartBody,
-    CartDown
+    ProductsArea,
+    ProductItem,
+    ProductPhoto,
+    ProductInfoArea,
+    ProductName,
+    ProductPrice,
+    ProductQuantityArea
 
 } from './styled'
 
 export default () => {
     const products = useSelector(state => state.cart.products);
 
-    const [show, setShow] = useState(false);
+    const [show, setShow] = useState(true);
 
     const handleCartClick = () => {
         setShow(!show);
@@ -27,10 +33,25 @@ export default () => {
             <CartHeader onClick={handleCartClick} >
                 <CartIcon src="/assets/cart.png" />
                 <CartText>Meu carrinho ({products.length})</CartText>
-                <CartDown src="/assets/down.png" />
+                {show &&
+                    <CartIcon src="/assets/down.png" />
+                }
             </CartHeader>
             <CartBody show={show} >
-                corpo do carrinho
+                <ProductsArea>
+                    {products.map((item, index) => (
+                        <ProductItem key={index} >
+                            <ProductPhoto src={item.image} />
+                            <ProductInfoArea>
+                                <ProductName> {item.name} </ProductName>
+                                <ProductPrice>R$ {item.price.toFixed(2)}</ProductPrice>
+                            </ProductInfoArea>
+                            <ProductQuantityArea>
+
+                            </ProductQuantityArea>
+                        </ProductItem>
+                    ))}
+                </ProductsArea>
             </CartBody>
         </CartArea>
     );
